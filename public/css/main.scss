@@ -1,0 +1,262 @@
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+    background: var(--Light-Grayish-Blue);
+    font-family: "Manrope", sans-serif;
+}
+
+/*Component*/
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.component {
+    display: flex;
+    width: 900px;
+    height: 100%;
+    background: white;
+    box-shadow: 3px 4px 10px 0px var(--Grayish-Blue);
+    border-radius: 15px;
+    .content-image {
+        width: 42%;
+        background: url("../img/drawers.jpg") no-repeat -4px center / cover;
+        border-radius: 15px 0 0 15px;
+    }
+    .info {
+        width: 58%;
+        padding: 1em 3em 2em 3em;
+        background: white;
+        border-radius: 0 15px 15px 0;
+        .main-text {
+            font-weight: 700;
+            font-size: 25px;
+            color: var(--Very-Dark-Grayish-Blue);
+        }
+        .secondary-text {
+            line-height: 28px;
+            color: var(--Desaturated-Dark-Blue);
+        }
+        > .share {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            .contact {
+                display: flex;
+                width: 80%;
+                line-height: 5px;
+                .img-contact {
+                    padding-right: 1em;
+                    > img {
+                        width: 50px;
+                        border-radius: 50px;
+                    }
+                }
+                .info-contact {
+                    > p {
+                        font-weight: 700;
+                        color: var(--Very-Dark-Grayish-Blue);
+                    }
+                    > span {
+                        font-size: 13px;
+                        color: var(--Desaturated-Dark-Blue);
+                    }
+                }
+            }
+            .content-icon {
+                position: relative;
+                width: 20%;
+                text-align: center;
+                > .icon-share {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                    background: var(--Light-Grayish-Blue);
+                    .share {
+                        fill: #6e8098;
+                    }
+                }
+
+                .responsive-tooltip {
+                    display: none;
+                }
+                
+                .tooltip {
+                    z-index: 1;
+                    opacity: 0.3;
+                    visibility: hidden;
+                    position: absolute;
+                    top: -45px;
+                    width: 150px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.5em 1em;
+                    border-radius: 5px;
+                    background: var(--Very-Dark-Grayish-Blue);
+                    box-shadow: 3px 4px 10px 0px var(--Grayish-Blue);
+                    transform: translateY(9px);
+                    transition: all 0.3s ease-in-out;
+                    span {
+                        font-size: 11px;
+                        letter-spacing: 5px;
+                        margin-right: 10px;
+                    }
+                    .icons {
+                        width: 15px;
+                        padding: 0 6px;
+                    }
+
+                    &::after {
+                        content: " ";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 12px 12.5px 0 12.5px;
+                        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+                        position: absolute;
+                        left: 50%;
+                        bottom: -10px;
+                        transform: translateX(-50%);
+                    }
+                }
+                &:hover {
+                    > .icon-share {
+                        background: var(--Desaturated-Dark-Blue);
+                        .share {
+                            fill: white;
+                        }
+                    }
+
+                    .tooltip {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 1.5em 0 0 0;
+    > a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+/*Responsive*/
+@media only screen and (max-width: 375px) {
+    .component {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        position: relative;
+        border-radius: 15px;
+        .content-image {
+            height: 180px;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            background-position-x: center;
+        }
+        .info {
+            position: relative;
+            width: auto;
+            height: 320px;
+            padding-bottom: 2em;
+            padding: 1em 2.3em 1em 2em;
+            border-radius: 0 0 15px 15px;
+            .main-text {
+                font-size: 15px;
+                line-height: 25px;
+            }
+            .secondary-text {
+                font-size: 13px;
+            }
+            > .share {
+                position: absolute;
+                background: white;
+                left: 0;
+                bottom: 0;
+                //padding-top: 0.8em;
+                //padding-bottom: 1em;
+                border-radius: 0 0 15px 15px;
+                .contact {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 2em;
+                    .img-contact {
+                        > img {
+                            width: 35px;
+                        }
+                    }
+                    .info-contact {
+                        > p {
+                            margin-top: -0.5px;
+                            font-size: 13px;
+                        }
+                        > span {
+                            font-size: 11px;
+                        }
+                    }
+                }
+                .content-icon{
+                    padding: 1em 0;
+                    padding-right: 1em;
+                    border-radius: 0 0 15px 0;
+                    .tooltip {
+                        display: none;
+                    }
+                    .responsive-tooltip {
+                        visibility: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        width: 250px;
+                        height: 20px;
+                        left: -250px;
+                        padding: 1.625em 0;
+                        color: white;
+                        background: var(--Very-Dark-Grayish-Blue);
+                        border-radius: 0 0 0 15px;
+                        span {
+                            font-size: 11px;
+                            letter-spacing: 5px;
+                            margin-right: 10px;
+                        }
+                        .icons {
+                            width: 20px;
+                            padding: 0 6px;
+                        }
+                    }
+                    &:hover {
+                        background: var(--Very-Dark-Grayish-Blue);
+                        .responsive-tooltip {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
