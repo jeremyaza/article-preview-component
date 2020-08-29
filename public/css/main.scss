@@ -94,7 +94,7 @@ body {
                 .responsive-tooltip {
                     display: none;
                 }
-                
+
                 .tooltip {
                     z-index: 1;
                     opacity: 0.3;
@@ -163,7 +163,101 @@ body {
 }
 
 /*Responsive*/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 900px) {
+    .component {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        border-radius: 15px;
+        .content-image {
+            height: 220px;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            background-position-x: center;
+        }
+        .info {
+            position: relative;
+            width: auto;
+            height: 320px;
+            padding-bottom: 2em;
+            padding: 1em 2.3em 1em 2em;
+            border-radius: 0 0 15px 15px;
+            .main-text {
+                font-size: 25px;
+            }
+            .secondary-text {
+                font-size: 15px;
+            }
+            > .share {
+                position: absolute;
+                background: white;
+                left: 0;
+                bottom: 0;
+                border-radius: 0 0 15px 15px;
+                .contact {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 2em;
+                    .img-contact {
+                        > img {
+                            width: 35px;
+                        }
+                    }
+                    .info-contact {
+                        > p {
+                            margin-top: -0.5px;
+                            font-size: 13px;
+                        }
+                        > span {
+                            font-size: 11px;
+                        }
+                    }
+                }
+                .content-icon {
+                    padding: 1em 0;
+                    padding-right: 1em;
+                    border-radius: 0 0 15px 0;
+                    .tooltip {
+                        display: none;
+                    }
+                    .responsive-tooltip {
+                        visibility: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        width: 473px;
+                        height: 20px;
+                        left: -473px;
+                        padding: 1.625em 0;
+                        color: white;
+                        background: var(--Very-Dark-Grayish-Blue);
+                        border-radius: 0 0 0 15px;
+                        span {
+                            font-size: 11px;
+                            letter-spacing: 5px;
+                            margin-right: 10px;
+                        }
+                        .icons {
+                            width: 20px;
+                            padding: 0 6px;
+                        }
+                    }
+                    &:hover {
+                        background: var(--Very-Dark-Grayish-Blue);
+                        .responsive-tooltip {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .component {
         display: flex;
         flex-direction: column;
@@ -197,8 +291,6 @@ body {
                 background: white;
                 left: 0;
                 bottom: 0;
-                //padding-top: 0.8em;
-                //padding-bottom: 1em;
                 border-radius: 0 0 15px 15px;
                 .contact {
                     display: flex;
@@ -219,7 +311,7 @@ body {
                         }
                     }
                 }
-                .content-icon{
+                .content-icon {
                     padding: 1em 0;
                     padding-right: 1em;
                     border-radius: 0 0 15px 0;

@@ -214,7 +214,116 @@ body {
 }
 
 /*Responsive*/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 900px) {
+  .component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 600px;
+    border-radius: 15px;
+  }
+  .component .content-image {
+    height: 220px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    background-position-x: center;
+  }
+  .component .info {
+    position: relative;
+    width: auto;
+    height: 320px;
+    padding-bottom: 2em;
+    padding: 1em 2.3em 1em 2em;
+    border-radius: 0 0 15px 15px;
+  }
+  .component .info .main-text {
+    font-size: 25px;
+  }
+  .component .info .secondary-text {
+    font-size: 15px;
+  }
+  .component .info > .share {
+    position: absolute;
+    background: white;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 15px 15px;
+  }
+  .component .info > .share .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 2em;
+  }
+  .component .info > .share .contact .img-contact > img {
+    width: 35px;
+  }
+  .component .info > .share .contact .info-contact > p {
+    margin-top: -0.5px;
+    font-size: 13px;
+  }
+  .component .info > .share .contact .info-contact > span {
+    font-size: 11px;
+  }
+  .component .info > .share .content-icon {
+    padding: 1em 0;
+    padding-right: 1em;
+    border-radius: 0 0 15px 0;
+  }
+  .component .info > .share .content-icon .tooltip {
+    display: none;
+  }
+  .component .info > .share .content-icon .responsive-tooltip {
+    visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    width: 473px;
+    height: 20px;
+    left: -473px;
+    padding: 1.625em 0;
+    color: white;
+    background: var(--Very-Dark-Grayish-Blue);
+    border-radius: 0 0 0 15px;
+  }
+  .component .info > .share .content-icon .responsive-tooltip span {
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-right: 10px;
+  }
+  .component .info > .share .content-icon .responsive-tooltip .icons {
+    width: 20px;
+    padding: 0 6px;
+  }
+  .component .info > .share .content-icon:hover {
+    background: var(--Very-Dark-Grayish-Blue);
+  }
+  .component .info > .share .content-icon:hover .responsive-tooltip {
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .component {
     display: -webkit-box;
     display: -ms-flexbox;
