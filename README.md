@@ -10,7 +10,7 @@ The Application is deployed in https://preview-component.herokuapp.com/
 
 Click on the link to see the application
 
-## Cloning and Running in local
+## Cloning and Running the Application in local
 
 Clone the project into local
 
